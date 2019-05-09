@@ -15,5 +15,6 @@ Route::view('/' , 'entrada');
 Route::get('primera', 'controladora@login');
 
 Route::view('login', 'login',['mensaje'=>'inicio']);
+Route::view('foro', 'foro');
 Route::view('registro', 'singUp',['mensaje'=>'inicio']);
 Route::post('singUp', 'controladora@singUp',['mensaje'=>'inicio']);

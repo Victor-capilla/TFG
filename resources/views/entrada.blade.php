@@ -9,5 +9,6 @@
 <body>
     <a href="login">login</a>
     <a href="registro">sing up</a>
+    <a href="foro">foro</a>
 </body>
 </html>

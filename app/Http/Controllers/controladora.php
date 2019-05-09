@@ -44,7 +44,7 @@ class controladora extends Controller
       try {
 
           
-        $insertusuario = cuentas::insert(['nombre' => $req->nombre, 'mail' => $req->mail , 'fecha_creacion' => $cadena_fecha_actual , 'id_grupo' => 1 , 'clave' => $req->clave]);
+        $insertusuario = cuentas::insert(['nombre' => $req->nombre, 'mail' => $req->mail , 'fecha_creacion' => $cadena_fecha_actual , 'clave' => $req->clave]);
         $mensaje = 'usuario registrado con exito';
         return view('login')->with('mensaje', $mensaje);
 
