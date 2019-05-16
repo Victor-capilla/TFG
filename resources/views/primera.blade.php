@@ -8,5 +8,6 @@
 </head>
 <body>
 <h1>{{$mensaje}}</h1>
+<h2>{{$grupo}}</h2>
 </body>
 </html>

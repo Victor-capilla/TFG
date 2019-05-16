@@ -3,10 +3,11 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use app\grupos;
 
 class cuentas extends Model
 {
-    protected $table = 'CUENTAS';
+    protected $table = 'cuentas';
 
     public $timestamps = false;
 
@@ -18,5 +19,10 @@ class cuentas extends Model
     public function mensajes()
     {
         return $this->hasMany('App\mensajes');
+    }
+
+    public function grupos()
+    {
+        return $this->belongsToMany('App\grupos' , 'tfg.grupos');
     }
 }

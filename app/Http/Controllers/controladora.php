@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 use App\cuentas;
+use App\grupos;
+use App\foros;
 use Illuminate\Http\Request;
 
 class controladora extends Controller
@@ -27,8 +29,10 @@ class controladora extends Controller
             return view('login')->with('mensaje', $mensaje);
 
         }else{
-
-            return view('primera')->with('mensaje', 'bienvenido '.$usuario->nombre);
+            
+            
+           
+            return view('primera')->with('mensaje', 'bienvenido '.$usuario->nombre)->with('grupo' , $usuario->grupos);
         }
       } catch (\Throwable $th) {
           echo("Error : " . $th);
@@ -51,6 +55,54 @@ class controladora extends Controller
       } catch (\Throwable $th) {
 
         $mensaje = 'Error al insertar los datos: ' . $th; 
+        return view('singUp')->with('mensaje', $mensaje);
+          
+      }
+     
+    }
+
+    public function foro(Request $req)
+    {
+        
+      
+      try {
+
+          
+        $foros = foros::get();
+        
+        $mensaje = 'entrada al foro con exito';
+        return view('foro')
+        ->with('mensaje', $mensaje)
+        ->with('foros', $foros);
+
+      } catch (\Throwable $th) {
+
+        $mensaje = 'Error' . $th; 
+        return view('singUp')->with('mensaje', $mensaje);
+          
+      }
+     
+    }
+
+    public function foronombres(Request $req )
+    {
+        
+      
+      try {
+
+          
+        
+        
+        $mensaje = 'oleeeeeee';
+        
+        return view('foronombre')
+        ->with('mensaje' , $mensaje)
+        ->with('nombre' , $req->nombre);
+        
+
+      } catch (\Throwable $th) {
+
+        $mensaje = 'Error' . $th; 
         return view('singUp')->with('mensaje', $mensaje);
           
       }

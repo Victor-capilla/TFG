@@ -7,6 +7,7 @@
     <title>Document</title>
 </head>
 <body>
+
    <form action="primera" method="get">
     
     {{csrf_field()}}
