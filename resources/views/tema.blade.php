@@ -7,7 +7,9 @@
     <title>Document</title>
 </head>
 <body>
-<h1>{{$mensaje}}</h1>
-
+<h1>{{$tema}}</h1>
+<br>
+<br>
+<p>{{$tema}}</p> 
 </body>
 </html>

@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class foros extends Model
 {
-    protected $table = 'FOROS';
+    protected $table = 'foros';
 
     public $timestamps = false;
 }

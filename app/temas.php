@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class temas extends Model
 {
-    protected $table = 'TEMAS';
+    protected $table = 'temas';
 
     public $timestamps = false;
 

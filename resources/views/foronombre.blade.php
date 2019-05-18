@@ -8,5 +8,13 @@
 </head>
 <body>
         <h1>{{$nombre}}</h1>
+        <div class="list-group">
+
+                @foreach ($temas as $tema)
+        <a href="{{url('foro/temas/'.$tema )}}" class="list-group-item list-group-item-action active">{{$tema->nombre}}</a> 
+                @endforeach  
+            
+        </div>
+        
 </body>
 </html>
