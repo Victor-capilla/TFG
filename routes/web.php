@@ -10,13 +10,14 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::view('/' , 'entrada');
 
-Route::get('primera', 'controladora@login');
-
-Route::view('login', 'login',['mensaje'=>'inicio']);
+Route::get('/' , 'controladora@entrada');
+Route::get('cuenta','controladora@meterseperfil');
+Route::get('perfil', 'controladora@logueado');
+Route::get('login', 'controladora@login');
 Route::get('foro', 'controladora@foro');
 Route::get('foro/{nombre}', 'controladora@foronombres' );
 Route::get('foro/temas/{nombre}', 'controladora@temas' );
-Route::view('registro', 'singUp',['mensaje'=>'inicio']);
-Route::post('singUp', 'controladora@singUp',['mensaje'=>'inicio']);
+Route::get('registro', 'controladora@singUp');
+Route::post('singUp', 'controladora@registrocompletado');
+Route::get('foro/{nombre}/creartema', 'controladora@creartema');

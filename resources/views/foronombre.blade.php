@@ -15,6 +15,24 @@
                 @endforeach  
             
         </div>
+        @if($usuario != "")
+       <div id="creartema">
+               <hr>
+               <h4>crear tema</h4>
+               <br>
+       <form action="{{url('foro/'.$nombre.'/creartema' )}}/" method="get">
+                       
+                         <label for="">nombre</label>
+                         <input type="text" class="form-control" name="nombre" id=""  placeholder="">
+                        
+                         <label for="">descripcion</label>
+                         <input type="text" class="form-control" name="descripcion" id=""  placeholder="">
+                        
+                         <input type="submit" value="enviar">
+                       
+               </form>
+       </div>
+        @endif()
         
 </body>
 </html>

@@ -8,7 +8,7 @@
 </head>
 <body>
 
-   <form action="primera" method="get">
+   <form action="perfil" method="get">
     
     {{csrf_field()}}
     nombre : <input type="text" name="nombre">

@@ -7,14 +7,7 @@
     <title>Document</title>
 </head>
 <body>
-    @if(isset($usuario))
-<a href="{{url('cuenta')}}">perfil</a>
-    @endif
-    <a href="login">login</a>
-    <a href="registro">sing up</a>
-    <a href="foro">foro</a>
-    <hr>
-    <br>
-<h1>{{$mensaje}}</h1>
+
+<h1><a href="{{url('/')}}">entrada</a></h1>  
 </body>
 </html>
